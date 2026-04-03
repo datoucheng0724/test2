@@ -485,244 +485,127 @@
     margin-bottom: 14px;
     display: block;
   }
-/* ═══════════════════════════════════════════════════════════
-   SECTION 5 — PRODUCT PORTFOLIOS
-   ═══════════════════════════════════════════════════════════ */
 
-/* Notice bar */
-.pp-notice {
-  display: flex; align-items: flex-start; gap: 10px;
-  background: var(--asus-blue-lt);
-  border-left: 4px solid var(--asus-blue);
-  border-radius: 8px;
-  padding: 14px 18px;
-  font-size: 13px; line-height: 1.6;
-  color: var(--text-secondary);
-  margin-bottom: 32px;
-  font-family: var(--font-zh);
-}
-[data-theme="dark"] .pp-notice { background: rgba(0,83,155,.15); }
-.pp-notice-icon { font-size: 18px; flex-shrink: 0; margin-top: 1px; }
-
-/* Sub-section title */
-.pp-sub-title {
-  font-size: 15px; font-weight: 700;
-  color: var(--text-primary);
-  margin-bottom: 16px;
-  font-family: var(--font-en);
+  /* 容器與區塊樣式 */
+.section-card {
+  min-height: 500px;
 }
 
-/* Revenue table */
-.pp-table-wrap { margin-bottom: 8px; }
-.pp-table-scroll { overflow-x: auto; }
-.pp-table {
-  width: 100%; border-collapse: collapse;
-  font-size: 13px;
-}
-.pp-table th {
-  background: var(--bg-alt);
-  color: var(--text-label);
-  font-weight: 700; font-size: 11px; letter-spacing: .06em;
-  text-transform: uppercase;
-  padding: 10px 14px; text-align: left;
-  border-bottom: 2px solid var(--border);
-}
-.pp-table td {
-  padding: 10px 14px;
-  border-bottom: 1px solid var(--border);
-  vertical-align: middle;
-}
-.pp-table tbody tr:hover { background: var(--surface-alt); }
-.pp-group-name {
-  display: flex; align-items: center; gap: 8px;
-  font-weight: 600; color: var(--text-primary);
-  font-family: var(--font-zh); min-width: 200px;
-}
-.pp-dot {
-  width: 10px; height: 10px;
-  border-radius: 50%; flex-shrink: 0;
-}
-.pp-bar-cell {
-  display: flex; align-items: center; gap: 8px;
-  min-width: 110px;
-}
-.pp-bar {
-  height: 8px; border-radius: 4px;
-  min-width: 4px;
-  transition: width .4s ease;
-}
-.pp-bar-cell span { font-size: 12px; font-weight: 700; color: var(--text-secondary); }
-.pp-source {
-  font-size: 11px; color: var(--text-label);
-  font-style: italic; margin-top: 8px;
-  font-family: var(--font-zh);
+.section-body {
+  padding: 30px;
 }
 
-/* Business Group Cards */
-.pp-cards {
+.portfolio-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
-.pp-card {
-  background: var(--bg-alt);
-  border: 1.5px solid var(--border);
-  border-radius: 10px;
-  padding: 22px 20px 18px;
+
+/* 卡片基礎樣式 */
+.portfolio-card {
+  background: linear-gradient(145deg, #ffffff, #f0f2f5);
+  border-radius: 20px;
+  padding: 30px;
   cursor: pointer;
-  transition: border-color .2s, box-shadow .2s, transform .15s;
-  display: flex; flex-direction: column; gap: 8px;
-  position: relative;
-}
-.pp-card:hover {
-  border-color: var(--asus-blue);
-  box-shadow: 0 4px 20px rgba(0,83,155,.12);
-  transform: translateY(-2px);
-}
-.pp-card-icon { font-size: 28px; }
-.pp-card-label {
-  font-size: 14px; font-weight: 700;
-  color: var(--text-primary);
-  line-height: 1.3;
-  font-family: var(--font-zh);
-}
-.pp-card-pct {
-  font-size: 12px; color: var(--asus-blue); font-weight: 600;
-  font-family: var(--font-zh);
-}
-.pp-card-arrow {
-  position: absolute; right: 16px; top: 50%;
-  transform: translateY(-50%);
-  font-size: 18px; color: var(--text-label);
-  transition: right .2s, color .2s;
-}
-.pp-card:hover .pp-card-arrow { right: 12px; color: var(--asus-blue); }
-
-/* Roadmap */
-.pp-roadmap { display: flex; flex-direction: column; gap: 0; }
-.pp-road-item {
-  display: flex; gap: 24px; align-items: flex-start;
-  padding: 20px 0;
-  border-left: 3px solid var(--border);
-  padding-left: 28px;
-  position: relative;
-}
-.pp-road-item::before {
-  content: '';
-  position: absolute; left: -7px; top: 24px;
-  width: 11px; height: 11px;
-  border-radius: 50%;
-  background: var(--border);
-  border: 2px solid var(--bg);
-}
-.pp-road-now { border-left-color: var(--asus-blue); }
-.pp-road-now::before { background: var(--asus-blue); }
-.pp-road-year {
-  font-size: 13px; font-weight: 800;
-  color: var(--asus-blue);
-  min-width: 60px; padding-top: 2px;
-  font-family: var(--font-en);
-}
-.pp-road-title {
-  font-size: 14px; font-weight: 700;
-  color: var(--text-primary);
-  margin-bottom: 10px;
-  font-family: var(--font-zh);
-}
-.pp-road-content ul {
-  padding-left: 18px;
-  font-size: 13px; line-height: 1.7;
-  color: var(--text-secondary);
-  font-family: var(--font-zh);
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  height: 220px;
+  display: flex;
+  flex-direction: column;
 }
 
-/* Portfolio Modal */
-.pp-modal-overlay {
-  display: none; position: fixed; inset: 0;
-  background: rgba(0,0,0,.5);
-  z-index: 3000;
-  align-items: center; justify-content: center;
-  padding: 20px;
+.portfolio-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+  border-color: #007bff;
 }
-.pp-modal-overlay.open { display: flex; }
-.pp-modal-box {
-  background: var(--surface);
-  border-radius: 14px;
-  padding: 40px 36px 32px;
-  max-width: 680px; width: 100%;
-  max-height: 85vh; overflow-y: auto;
-  position: relative;
-  box-shadow: 0 16px 60px rgba(0,0,0,.30);
-  border-top: 4px solid var(--asus-blue);
-}
-.pp-modal-close {
-  position: absolute; top: 14px; right: 16px;
-  background: none; border: none;
-  font-size: 20px; cursor: pointer;
-  color: var(--text-label); line-height: 1;
-}
-.pp-modal-header {
-  display: flex; align-items: center; gap: 14px;
-  margin-bottom: 12px;
-}
-.pp-modal-icon { font-size: 32px; }
-.pp-modal-title {
-  font-size: 20px; font-weight: 700;
-  color: var(--text-primary);
-  font-family: var(--font-zh);
-}
-.pp-modal-desc {
-  font-size: 14px; color: var(--text-secondary);
-  line-height: 1.7; margin-bottom: 24px;
-  font-family: var(--font-zh);
-}
-.pp-modal-grid {
-  display: grid; grid-template-columns: 1fr 1fr;
-  gap: 24px; margin-bottom: 24px;
-}
-@media (max-width: 540px) { .pp-modal-grid { grid-template-columns: 1fr; } }
-.pp-modal-section-title {
-  font-size: 13px; font-weight: 700;
-  color: var(--asus-blue);
-  text-transform: uppercase; letter-spacing: .06em;
-  margin-bottom: 10px;
-}
-.pp-modal-list {
-  padding-left: 18px;
-  font-size: 13px; line-height: 1.8;
-  color: var(--text-secondary);
-  font-family: var(--font-zh);
-}
-.pp-modal-rev-table {
-  width: 100%; border-collapse: collapse;
-  font-size: 13px;
-}
-.pp-modal-rev-table th {
-  text-align: left; font-size: 11px; font-weight: 700;
-  color: var(--text-label); letter-spacing: .06em;
-  padding: 6px 8px;
-  border-bottom: 1px solid var(--border);
-}
-.pp-modal-rev-table td {
-  padding: 7px 8px;
-  border-bottom: 1px solid var(--border);
-  font-family: var(--font-en);
-}
-.pp-modal-insight {
-  display: flex; gap: 12px; align-items: flex-start;
-  background: var(--asus-blue-lt);
-  border-radius: 8px;
-  padding: 16px 18px;
-  font-size: 13px; line-height: 1.7;
-  color: var(--text-secondary);
-  font-family: var(--font-zh);
-}
-[data-theme="dark"] .pp-modal-insight { background: rgba(0,83,155,.18); }
-.pp-modal-insight-icon { font-size: 20px; flex-shrink: 0; }
 
-/* Responsive adjustments */
-@media (max-width: 600px) {
-  .pp-cards { grid-template-columns: 1fr 1fr; }
-  .pp-road-item { flex-direction: column; gap: 6px; }
-  .pp-modal-box { padding: 28px 20px 24px; }
+.card-icon {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.card-title-en {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-title-zh {
+  font-size: 18px;
+  color: #666;
+  margin-top: 5px;
+  font-weight: bold;
+}
+
+/* 趨勢與亮點標記 */
+.revenue-trend {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.trend-down { color: #dc3545; }
+.trend-up { color: #28a745; }
+.trend-wave { color: #ffc107; }
+
+.card-highlight {
+  margin-top: auto;
+  text-align: center;
+  font-weight: bold;
+  color: #007bff;
+}
+
+.highlight-bar {
+  height: 6px;
+  border-radius: 3px;
+  margin-bottom: 8px;
+}
+
+/* 各類別進度條顏色 */
+.system-bar { background: linear-gradient(90deg, #007bff, #0056b3); }
+.platform-bar { background: linear-gradient(90deg, #28a745, #1e7e34); }
+.isg-bar { background: linear-gradient(90deg, #dc3545, #c82333); }
+.roadmap-bar { background: linear-gradient(90deg, #ffc107, #e0a800); }
+
+/* 模態框 (Modal) 樣式 */
+.detail-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  z-index: 1000;
+  animation: fadeIn 0.3s;
+}
+
+.modal-content {
+  max-width: 800px;
+  margin: 5% auto;
+  background: white;
+  border-radius: 20px;
+  padding: 40px;
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 30px;
+  cursor: pointer;
+  color: #666;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
