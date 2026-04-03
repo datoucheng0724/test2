@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ASUSTeK Computer Inc. – Computer & Peripherals | TP Research</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="style.css" />
+<link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet" />
+</head>
+<body data-lang="en">
+
+<a class="skip-link" href="#main-content">Skip to content</a>
+
+<!-- ── HEADER ──────────────────────────────────────────────── -->
+<header>
+  <div class="header-left">
+    <button class="hamburger" id="menuBtn" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <a class="brand" href="#" aria-label="ASUS TP Research">
+      <img src="images/logo.png" alt="ASUS" class="brand-logo" />
+      <span class="brand-sub">
+        <span class="en">Computer &amp; Peripherals Industry Chain | TP Research</span>
+        <span class="zh">電腦及週邊設備產業鏈 | 移轉訂價研究</span>
+      </span>
+    </a>
+  </div>
+  <div class="header-right">
+    <div class="lang-toggle" role="group" aria-label="Language selector">
+      <button class="lang-btn active" id="btnEN" onclick="setLang('en')" aria-pressed="true">EN</button>
+      <button class="lang-btn"        id="btnZH" onclick="setLang('zh')" aria-pressed="false">中文</button>
+    </div>
+    <button class="theme-toggle" id="themeBtn" aria-label="Toggle dark/light mode">🌙</button>
+  </div>
+</header>
+
+<!-- ── NAV OVERLAY ──────────────────────────────────────────── -->
+<div class="nav-overlay" id="navOverlay" onclick="closeNav()"></div>
+
+<!-- ── SIDE NAV ─────────────────────────────────────────────── -->
+<nav class="sidenav" id="sideNav" aria-label="Main navigation">
+
+  <span class="nav-section-label">TP0 — Reminder</span>
+
+  <a class="nav-item active" href="#s1-news" onclick="navClick(this)">
+    <span class="nav-icon">📰</span>
+    <span><span class="en">Recent News</span><span class="zh">最新消息</span></span>
+    <span class="nav-badge">1</span>
+  </a>
+  <a class="nav-item" href="#s2-history" onclick="navClick(this)">
+    <span class="nav-icon">🏛️</span>
+    <span><span class="en">Company History</span><span class="zh">公司發展歷程</span></span>
+    <span class="nav-badge">2</span>
+  </a>
+  <a class="nav-item" href="#s3-vmv" onclick="navClick(this)">
+    <span class="nav-icon">🎯</span>
+    <span><span class="en">Vision / Mission / Values</span><span class="zh">願景／使命／價值觀</span></span>
+    <span class="nav-badge">3</span>
+  </a>
+  <a class="nav-item" href="#s4-org" onclick="navClick(this)">
+    <span class="nav-icon">🏢</span>
+    <span><span class="en">Organizational Structure</span><span class="zh">組織架構</span></span>
+    <span class="nav-badge">4</span>
+  </a>
+  <a class="nav-item" href="#s5-product" onclick="navClick(this)">
+    <span class="nav-icon">💻</span>
+    <span><span class="en">Product Portfolios</span><span class="zh">產品組合</span></span>
+    <span class="nav-badge">5</span>
+  </a>
+  <a class="nav-item" href="#s6-finance" onclick="navClick(this)">
+    <span class="nav-icon">📊</span>
+    <span><span class="en">Financial Performance</span><span class="zh">財務表現</span></span>
+    <span class="nav-badge">6</span>
+  </a>
+
+</nav>
+
+<!-- ── MAIN ──────────────────────────────────────────────────── -->
+<main id="main-content">
+
+  <!-- Hero -->
+  <div class="hero">
+    <div class="hero-tag">
+      TP0 — <span class="en">Company Reminder</span><span class="zh">公司基本資料</span>
+    </div>
+    <h1>
+      <span class="zh">華碩電腦股份有限公司</span>
+      ASUSTeK Computer Inc.
+      <span style="display:block;font-size:.52em;font-weight:400;margin-top:6px;opacity:.82;">
+        <span class="en">Computer &amp; Peripherals Industry Chain</span>
+        <span class="zh">電腦及週邊設備產業鏈</span>
+      </span>
+    </h1>
+    <p class="hero-subtitle">
+      <span class="en">A structured Transfer Pricing (TP) research report analyzing intercompany transactions within ASUSTeK's Computer &amp; Peripherals supply chain under the arm's length principle.</span>
+      <span class="zh">本研究報告依常規交易原則，系統性分析華碩電腦電腦及週邊設備產業鏈之關係企業交易移轉訂價。</span>
+    </p>
+    <div class="hero-meta">
+      <span class="hero-chip">🏢 <span class="en">ASUSTeK Computer Inc. (華碩電腦)</span><span class="zh">華碩電腦股份有限公司</span></span>
+      <span class="hero-chip">💻 <span class="en">Computer &amp; Peripherals</span><span class="zh">電腦及週邊設備</span></span>
+      <span class="hero-chip">🌐 <span class="en">OECD TP Guidelines</span><span class="zh">OECD 移轉訂價準則</span></span>
+      <span class="hero-chip">📅 2025</span>
+    </div>
+  </div>
+
+  <!-- TP0 Sections -->
+  <div class="sections">
+
+    <!-- ── SECTION 1: Recent News ─────────────────────────── -->
+    <div class="section-card" id="s1-news">
+      <div class="section-header" onclick="toggleSection(this)">
+        <div class="section-num">1</div>
+        <div class="section-title-wrap">
+          <div class="section-title-en">
+            <span class="en">Recent News</span>
+            <span class="zh">最新消息</span>
+          </div>
+          <div class="section-title-zh">
+            <span class="en">One or two of the most recent significant news</span>
+            <span class="zh">一至兩則最新重要新聞摘要</span>
+          </div>
+        </div>
+        <span class="section-status"><span class="en">Pending</span><span class="zh">待填寫</span></span>
+        <span class="section-chevron">▾</span>
+      </div>
+      <div class="section-body">
+        <div class="content-slot"><span class="slot-icon">📰</span>
+          <div class="slot-label-en"><span class="en">News Item 1</span><span class="zh">新聞一</span></div>
+          <div class="slot-label-zh"><span class="en">Date · Source · Headline</span><span class="zh">日期・來源・標題</span></div>
+          <div class="slot-hint"><span class="en">Content to be added</span><span class="zh">內容待補充</span></div>
+        </div>
+        <div class="content-slot"><span class="slot-icon">📰</span>
+          <div class="slot-label-en"><span class="en">News Item 2</span><span class="zh">新聞二</span></div>
+          <div class="slot-label-zh"><span class="en">Date · Source · Headline</span><span class="zh">日期・來源・標題</span></div>
+          <div class="slot-hint"><span class="en">Content to be added</span><span class="zh">內容待補充</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── SECTION 2: Company History ──────────────────────── -->
+    <div class="section-card" id="s2-history">
+      <div class="section-header" onclick="toggleSection(this)">
+        <div class="section-num">2</div>
+        <div class="section-title-wrap">
+          <div class="section-title-en">
+            <span class="en">Company History</span>
+            <span class="zh">公司發展歷程</span>
+          </div>
+          <div class="section-title-zh">
+            <span class="en">Key milestones — not a summary</span>
+            <span class="zh">關鍵里程碑（非摘要式描述）</span>
+          </div>
+        </div>
+        <span class="section-status"><span class="en">Pending</span><span class="zh">待填寫</span></span>
+        <span class="section-chevron">▾</span>
+      </div>
+      <div class="section-body">
+        <div class="content-slot"><span class="slot-icon">🚀</span>
+          <div class="slot-label-en"><span class="en">Founding &amp; Early Years</span><span class="zh">創立與早期發展</span></div>
+          <div class="slot-label-zh"><span class="en">1989 – founding, first products</span><span class="zh">1989年創立，初期產品</span></div>
+          <div class="slot-hint"><span class="en">Content to be added</span><span class="zh">內容待補充</span></div>
+        </div>
+        <div class="content-slot"><span class="slot-icon">📈</span>
+          <div class="slot-label-en"><span class="en">Growth &amp; Expansion</span><span class="zh">成長與擴張</span></div>
+          <div class="slot-label-zh"><span class="en">Key acquisitions, market entries</span><span class="zh">重要併購、進入新市場</span></div>
+          <div class="slot-hint"><span class="en">Content to be added</span><span class="zh">內容待補充</span></div>
+        </div>
+        <div class="content-slot"><span class="slot-icon">🏆</span>
+          <div class="slot-label-en"><span class="en">Major Milestones</span><span class="zh">重要里程碑</span></div>
+          <div class="slot-label-zh"><span class="en">Awards, listings, spin-offs</span><span class="zh">獲獎、上市、分拆等</span></div>
+          <div class="slot-hint"><span class="en">Content to be added</span><span class="zh">內容待補充</span></div>
+        </div>
+        <div class="content-slot"><span class="slot-icon">🔮</span>
+          <div class="slot-label-en"><span class="en">Recent Developments</span><span class="zh">近期重要發展</span></div>
+          <div class="slot-label-zh"><span class="en">2020–present highlights</span><span class="zh">2020年迄今之重要事件</span></div>
+          <div class="slot-hint"><span class="en">Content to be added</span><span class="zh">內容待補充</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── SECTION 3: Vision / Mission / Values ────────────── -->
+    <div class="section-card" id="s3-vmv">
+      <div class="section-header" onclick="toggleSection(this)">
+        <div class="section-num">3</div>
+        <div class="section-title-wrap">
+          <div class="section-title-en">
+            <span class="en">Vision / Mission / Values</span>
+            <span class="zh">願景／使命／價值觀</span>
+          </div>
+          <div class="section-title-zh">
+            <span class="en">to-be · to-do · to-behave</span>
+            <span class="zh">願景（to-be）・使命（to-do）・價值觀（to-behave）</span>
+          </div>
+        </div>
+        <span class="section-status"><span class="en">Pending</span><span class="zh">待填寫</span></span>
+        <span class="section-chevron">▾</span>
+      </div>
+      <div class="section-body">
+        <div class="content-slot"><span class="slot-icon">🌟</span>
+          <div class="slot-label-en"><span class="en">Vision — to-be</span><span class="zh">願景（to-be）</span></div>
+          <div class="slot-label-zh"><span class="en">What ASUS aspires to become</span><span class="zh">華碩致力成為的目標</span></div>
+          <div class="slot-hint"><span class="en">Content to be added</span><span class="zh">內容待補充</span></div>
+        </div>
+        <div class="content-slot"><span class="slot-icon">🎯</span>
+          <div class="slot-label-en"><span class="en">Mission — to-do</span><span class="zh">使命（to-do）</span></div>
+          <div class="slot-label-zh"><span class="en">What ASUS commits to doing</span><span class="zh">華碩承諾執行的任務</span></div>
+          <div class="slot-hint"><span class="en">Content to be added</span><span class="zh">內容待補充</span></div>
+        </div>
+        <div class="content-slot"><span class="slot-icon">💎</span>
+          <div class="slot-label-en"><span class="en">Values — to-behave</span><span class="zh">價值觀（to-behave）</span></div>
+          <div class="slot-label-zh"><span class="en">Core principles guiding conduct</span><span class="zh">指導行為的核心原則</span></div>
+          <div class="slot-hint"><span class="en">Content to be added</span><span class="zh">內容待補充</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── SECTION 4: Organizational Structure ─────────────── -->
+    <div class="section-card" id="s4-org">
+      <div class="section-header" onclick="toggleSection(this)">
+        <div class="section-num">4</div>
+        <div class="section-title-wrap">
+          <div class="section-title-en">
+            <span class="en">Organizational Structure &amp; Management Team</span>
+            <span class="zh">組織架構與管理團隊</span>
+          </div>
+          <div class="section-title-zh">
+            <span class="en">Business / Functional / Regional Units and key executives</span>
+            <span class="zh">事業部／功能部門／區域單位及主要高階主管</span>
+          </div>
+        </div>
+        <span class="section-status"><span class="en">Pending</span><span class="zh">待填寫</span></span>
+        <span class="section-chevron">▾</span>
+      </div>
+      <div class="section-body">
+        <div class="content-slot"><span class="slot-icon">🏗️</span>
+          <div class="slot-label-en"><span class="en">Business Units</span><span class="zh">事業部門</span></div>
+          <div class="slot-label-zh"><span class="en">PC, ROG, ProArt, Commercial…</span><span class="zh">PC、ROG、ProArt、商用…</span></div>
+          <div class="slot-hint"><span class="en">Content to be added</span><span class="zh">內容待補充</span></div>
+        </div>
+        <div class="content-slot"><span class="slot-icon">⚙️</span>
+          <div class="slot-label-en"><span class="en">Functional Units</span><span class="zh">功能部門</span></div>
+          <div class="slot-label-zh"><span class="en">R&amp;D, Finance, Supply Chain…</span><span class="zh">研發、財務、供應鏈…</span></div>
+          <div class="slot-hint"><span class="en">Content to be added</span><span class="zh">內容待補充</span></div>
+        </div>
+        <div class="content-slot"><span class="slot-icon">🗺️</span>
+          <div class="slot-label-en"><span class="en">Regional Units</span><span class="zh">區域單位</span></div>
+          <div class="slot-label-zh"><span class="en">Asia-Pacific, Americas, EMEA…</span><span class="zh">亞太、美洲、歐中東非…</span></div>
+          <div class="slot-hint"><span class="en">Content to be added</span><span class="zh">內容待補充</span></div>
+        </div>
+        <div class="content-slot"><span class="slot-icon">👔</span>
+          <div class="slot-label-en"><span class="en">Management Team</span><span class="zh">管理團隊</span></div>
+          <div class="slot-label-zh"><span class="en">Chairman, CEO &amp; key officers</span><span class="zh">董事長、執行長及主要高管</span></div>
+          <div class="slot-hint"><span class="en">Content to be added</span><span class="zh">內容待補充</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── SECTION 5: Product Portfolios ───────────────────── -->
+    <div class="section-card" id="s5-product">
+      <div class="section-header" onclick="toggleSection(this)">
+        <div class="section-num">5</div>
+        <div class="section-title-wrap">
+          <div class="section-title-en">
+            <span class="en">Product Portfolios</span>
+            <span class="zh">產品組合</span>
+          </div>
+          <div class="section-title-zh">
+            <span class="en">Product Lines &amp; Roadmap — Net Sales % 2021–2025</span>
+            <span class="zh">產品線與產品藍圖（含各線佔淨營收比例 2021–2025）</span>
+          </div>
+        </div>
+        <span class="section-status done"><span class="en">Complete</span><span class="zh">已完成</span></span>
+        <span class="section-chevron">▾</span>
+      </div>
+
+      <div class="section-body" style="display:block; padding:32px 36px;">
+
+        <!-- ── Note on classification change ── -->
+        <div class="pp-notice">
+          <span class="pp-notice-icon">ℹ️</span>
+          <span class="en">From 2024, ASUS restructured its reporting into larger Business Groups. ISG (Infrastructure Solutions Group) was formally separated as an independent segment in 2025.</span>
+          <span class="zh">自2024年起，華碩依較大的事業群重新分類揭露。ISG（基礎設施解決方案事業群）於2025年正式獨立為單獨報告分部。</span>
+        </div>
+
+        <!-- ── Revenue Mix Table ── -->
+        <div class="pp-table-wrap">
+          <h3 class="pp-sub-title">
+            <span class="en">📊 Net Sales Mix by Business Group (2021–2025)</span>
+            <span class="zh">📊 各事業群淨營收佔比（2021–2025）</span>
+          </h3>
+          <div class="pp-table-scroll">
+            <table class="pp-table">
+              <thead>
+                <tr>
+                  <th><span class="en">Business Group</span><span class="zh">事業群</span></th>
+                  <th>2021</th><th>2022</th><th>2023</th><th>2024</th><th>2025</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="pp-group-name">
+                    <span class="pp-dot" style="background:#00539B"></span>
+                    <span class="en">System Business (PC)</span>
+                    <span class="zh">系統產品（PC）</span>
+                  </td>
+                  <td><div class="pp-bar-cell"><div class="pp-bar" style="width:64%;background:#00539B"></div><span>64%</span></div></td>
+                  <td><div class="pp-bar-cell"><div class="pp-bar" style="width:67%;background:#00539B"></div><span>67%</span></div></td>
+                  <td><div class="pp-bar-cell"><div class="pp-bar" style="width:63%;background:#00539B"></div><span>63%</span></div></td>
+                  <td><div class="pp-bar-cell"><div class="pp-bar" style="width:60%;background:#00539B"></div><span>60%</span></div></td>
+                  <td><div class="pp-bar-cell"><div class="pp-bar" style="width:52%;background:#00539B"></div><span>52%</span></div></td>
+                </tr>
+                <tr>
+                  <td class="pp-group-name">
+                    <span class="pp-dot" style="background:#0099CC"></span>
+                    <span class="en">Open Platform (Components)</span>
+                    <span class="zh">開放式平台（零組件）</span>
+                  </td>
+                  <td><div class="pp-bar-cell"><div class="pp-bar" style="width:34%;background:#0099CC"></div><span>34%</span></div></td>
+                  <td><div class="pp-bar-cell"><div class="pp-bar" style="width:32%;background:#0099CC"></div><span>32%</span></div></td>
+                  <td><div class="pp-bar-cell"><div class="pp-bar" style="width:36%;background:#0099CC"></div><span>36%</span></div></td>
+                  <td><div class="pp-bar-cell"><div class="pp-bar" style="width:38%;background:#0099CC"></div><span>38%</span></div></td>
+                  <td><div class="pp-bar-cell"><div class="pp-bar" style="width:28%;background:#0099CC"></div><span>28%</span></div></td>
+                </tr>
+                <tr>
+                  <td class="pp-group-name">
+                    <span class="pp-dot" style="background:#E4002B"></span>
+                    <span class="en">ISG (Infrastructure / AI Server)</span>
+                    <span class="zh">基礎設施解決方案（AI伺服器）</span>
+                  </td>
+                  <td><div class="pp-bar-cell"><span style="color:var(--text-label)">—</span></div></td>
+                  <td><div class="pp-bar-cell"><span style="color:var(--text-label)">—</span></div></td>
+                  <td><div class="pp-bar-cell"><span style="color:var(--text-label)">—</span></div></td>
+                  <td><div class="pp-bar-cell"><span style="color:var(--text-label)">—</span></div></td>
+                  <td><div class="pp-bar-cell"><div class="pp-bar" style="width:18%;background:#E4002B"></div><span>18%</span></div></td>
+                </tr>
+                <tr>
+                  <td class="pp-group-name">
+                    <span class="pp-dot" style="background:#00A651"></span>
+                    <span class="en">AIoT (Smart Solutions)</span>
+                    <span class="zh">AIoT（智慧解決方案）</span>
+                  </td>
+                  <td><div class="pp-bar-cell"><span style="color:var(--text-label)">—</span></div></td>
+                  <td><div class="pp-bar-cell"><span style="color:var(--text-label)">—</span></div></td>
+                  <td><div class="pp-bar-cell"><span style="color:var(--text-label)">—</span></div></td>
+                  <td><div class="pp-bar-cell"><div class="pp-bar" style="width:2%;background:#00A651"></div><span>2%</span></div></td>
+                  <td><div class="pp-bar-cell"><div class="pp-bar" style="width:2%;background:#00A651"></div><span>2%</span></div></td>
+                </tr>
+                <tr>
+                  <td class="pp-group-name">
+                    <span class="pp-dot" style="background:#AAB0B8"></span>
+                    <span class="en">Phone</span>
+                    <span class="zh">手機</span>
+                  </td>
+                  <td><div class="pp-bar-cell"><div class="pp-bar" style="width:2%;background:#AAB0B8"></div><span>2%</span></div></td>
+                  <td><div class="pp-bar-cell"><div class="pp-bar" style="width:1%;background:#AAB0B8"></div><span>1%</span></div></td>
+                  <td><div class="pp-bar-cell"><div class="pp-bar" style="width:1%;background:#AAB0B8"></div><span>1%</span></div></td>
+                  <td><div class="pp-bar-cell"><span style="color:var(--text-label)">—</span></div></td>
+                  <td><div class="pp-bar-cell"><span style="color:var(--text-label)">—</span></div></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="pp-source"><span class="en">Sources: ASUS Investor Conference Presentations 2021–2025</span><span class="zh">資料來源：華碩各年度法說會簡報 2021–2025</span></p>
+        </div>
+
+        <!-- ── 4 Business Group Cards ── -->
+        <h3 class="pp-sub-title" style="margin-top:36px;">
+          <span class="en">🏢 Business Groups — Click to Explore</span>
+          <span class="zh">🏢 事業群介紹 — 點擊查看詳情</span>
+        </h3>
+        <div class="pp-cards">
+
+          <div class="pp-card" onclick="openPortfolio('system')">
+            <div class="pp-card-icon">💻</div>
+            <div class="pp-card-label">
+              <span class="en">System Business</span>
+              <span class="zh">系統產品事業群</span>
+            </div>
+            <div class="pp-card-pct">
+              <span class="en">52% of net sales (2025)</span>
+              <span class="zh">佔淨營收 52%（2025）</span>
+            </div>
+            <div class="pp-card-arrow">→</div>
+          </div>
+
+          <div class="pp-card" onclick="openPortfolio('platform')">
+            <div class="pp-card-icon">🖥️</div>
+            <div class="pp-card-label">
+              <span class="en">Open Platform</span>
+              <span class="zh">開放式平台事業群</span>
+            </div>
+            <div class="pp-card-pct">
+              <span class="en">28% of net sales (2025)</span>
+              <span class="zh">佔淨營收 28%（2025）</span>
+            </div>
+            <div class="pp-card-arrow">→</div>
+          </div>
+
+          <div class="pp-card" onclick="openPortfolio('isg')">
+            <div class="pp-card-icon">🖧</div>
+            <div class="pp-card-label">
+              <span class="en">ISG — Infrastructure Solutions</span>
+              <span class="zh">基礎設施解決方案事業群</span>
+            </div>
+            <div class="pp-card-pct">
+              <span class="en">18% of net sales (2025)</span>
+              <span class="zh">佔淨營收 18%（2025）</span>
+            </div>
+            <div class="pp-card-arrow">→</div>
+          </div>
+
+          <div class="pp-card" onclick="openPortfolio('aiot')">
+            <div class="pp-card-icon">🤖</div>
+            <div class="pp-card-label">
+              <span class="en">AIoT — Smart Solutions</span>
+              <span class="zh">AIoT 智慧解決方案事業群</span>
+            </div>
+            <div class="pp-card-pct">
+              <span class="en">2% of net sales (2025)</span>
+              <span class="zh">佔淨營收 2%（2025）</span>
+            </div>
+            <div class="pp-card-arrow">→</div>
+          </div>
+
+        </div><!-- /pp-cards -->
+
+        <!-- ── Product Roadmap ── -->
+        <h3 class="pp-sub-title" style="margin-top:36px;">
+          <span class="en">🗺️ Product Roadmap</span>
+          <span class="zh">🗺️ 產品藍圖</span>
+        </h3>
+        <div class="pp-roadmap">
+          <div class="pp-road-item">
+            <div class="pp-road-year">2022–23</div>
+            <div class="pp-road-content">
+              <div class="pp-road-title"><span class="en">Performance &amp; Specialisation</span><span class="zh">效能提升與產品特化</span></div>
+              <ul>
+                <li><span class="en">OLED &amp; Creator PC lines expanded; dual-screen ultra-thin models launched</span><span class="zh">OLED 與創作者電腦產品線擴張；雙螢幕超薄高效機型上市</span></li>
+                <li><span class="en">Multi-phase power motherboards &amp; high-end 3D graphics cards developed</span><span class="zh">多相供電主機板與高階3D顯示卡開發</span></li>
+                <li><span class="en">Early AI server solutions for smart manufacturing &amp; healthcare</span><span class="zh">早期 AI 伺服器應用於智慧製造與醫療</span></li>
+              </ul>
+            </div>
+          </div>
+          <div class="pp-road-item">
+            <div class="pp-road-year">2024</div>
+            <div class="pp-road-content">
+              <div class="pp-road-title"><span class="en">The AI Transformation</span><span class="zh">AI 轉型元年</span></div>
+              <ul>
+                <li><span class="en">1st-generation AI Laptops launched — redefining user behaviour via generative AI</span><span class="zh">第一代 AI 筆電上市，以生成式 AI 重新定義使用行為</span></li>
+                <li><span class="en">ROG Ally handheld ecosystem expanded alongside gaming laptops</span><span class="zh">ROG Ally 掌上型電玩生態系擴展</span></li>
+                <li><span class="en">AI Server revenue grew &gt;50% YoY</span><span class="zh">AI 伺服器年增逾50%</span></li>
+              </ul>
+            </div>
+          </div>
+          <div class="pp-road-item pp-road-now">
+            <div class="pp-road-year">2025</div>
+            <div class="pp-road-content">
+              <div class="pp-road-title"><span class="en">Ubiquitous AI &amp; Sustainability</span><span class="zh">全面 AI 化與永續發展</span></div>
+              <ul>
+                <li><span class="en">Copilot+ PCs &amp; AI-integrated motherboards; target &gt;30% Copilot+ PC market share</span><span class="zh">Copilot+ PC 與 AI 整合主機板；目標 Copilot+ PC 市占率逾30%</span></li>
+                <li><span class="en">Liquid-cooled AI supercomputers &amp; high-scalability AI servers for cloud/edge</span><span class="zh">液冷 AI 超級電腦與高擴展性 AI 伺服器，應對雲端與邊緣運算需求</span></li>
+                <li><span class="en">Low-carbon product design &amp; sustainable development integrated into R&amp;D (ESG)</span><span class="zh">低碳產品設計與永續發展納入研發核心（ESG）</span></li>
+                <li><span class="en">R&amp;D investment: ~3–5% of annual total revenue</span><span class="zh">研發投入：約佔年度總營收 3–5%</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /section-body -->
+    </div>
+
+    <!-- ── PORTFOLIO DETAIL MODAL ────────────────────────────── -->
+    <div id="portfolioModal" class="pp-modal-overlay" onclick="closePortfolio(event)">
+      <div class="pp-modal-box">
+        <button class="pp-modal-close" onclick="closePortfolio(null)">✕</button>
+        <div id="portfolioContent"></div>
+      </div>
+    </div>
+
+    <!-- ── SECTION 6: Financial Performance ────────────────── -->
+    <div class="section-card" id="s6-finance">
+      <div class="section-header" onclick="toggleSection(this)">
+        <div class="section-num">6</div>
+        <div class="section-title-wrap">
+          <div class="section-title-en">
+            <span class="en">Financial Performance 2021–2025</span>
+            <span class="zh">財務表現 2021–2025</span>
+          </div>
+          <div class="section-title-zh">
+            <span class="en">Profitability・Operational Efficiency・Capital Structure・Solvency & Liquidity・Stock Price</span>
+            <span class="zh">獲利能力・經營能力・財務結構・償債能力・股價</span>
+          </div>
+        </div>
+        <span class="section-status"><span class="en">Pending</span><span class="zh">待填寫</span></span>
+        <span class="section-chevron">▾</span>
+      </div>
+      <div class="section-body">
+        <div class="content-slot"><span class="slot-icon">💰</span>
+          <div class="slot-label-en"><span class="en">Profitability</span><span class="zh">獲利能力</span></div>
+          <div class="slot-label-zh"><span class="en">ROE, ROA, Gross / Net Margin</span><span class="zh">股東權益報酬率、總資產報酬率、毛利率、淨利率</span></div>
+          <div class="slot-hint"><span class="en">Content to be added</span><span class="zh">內容待補充</span></div>
+        </div>
+        <div class="content-slot"><span class="slot-icon">🔄</span>
+          <div class="slot-label-en"><span class="en">Operational Efficiency</span><span class="zh">經營能力</span></div>
+          <div class="slot-label-zh"><span class="en">Asset / Inventory / AR turnover</span><span class="zh">總資產週轉率、存貨週轉率、應收帳款週轉率</span></div>
+          <div class="slot-hint"><span class="en">Content to be added</span><span class="zh">內容待補充</span></div>
+        </div>
+        <div class="content-slot"><span class="slot-icon">🏛️</span>
+          <div class="slot-label-en"><span class="en">Capital Structure</span><span class="zh">財務結構</span></div>
+          <div class="slot-label-zh"><span class="en">Debt ratio, Equity ratio, D/E</span><span class="zh">負債比率、權益比率、負債權益比</span></div>
+          <div class="slot-hint"><span class="en">Content to be added</span><span class="zh">內容待補充</span></div>
+        </div>
+        <div class="content-slot"><span class="slot-icon">💧</span>
+          <div class="slot-label-en"><span class="en">Solvency &amp; Liquidity</span><span class="zh">償債能力</span></div>
+          <div class="slot-label-zh"><span class="en">Current ratio, Quick ratio, ICR</span><span class="zh">流動比率、速動比率、利息保障倍數</span></div>
+          <div class="slot-hint"><span class="en">Content to be added</span><span class="zh">內容待補充</span></div>
+        </div>
+        <div class="content-slot"><span class="slot-icon">📈</span>
+          <div class="slot-label-en"><span class="en">Stock Price</span><span class="zh">股價表現</span></div>
+          <div class="slot-label-zh"><span class="en">Annual high / low / close, EPS, P/E</span><span class="zh">年度高低收盤價、每股盈餘、本益比</span></div>
+          <div class="slot-hint"><span class="en">Content to be added</span><span class="zh">內容待補充</span></div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /sections -->
+</main>
+
+<!-- ── FOOTER ────────────────────────────────────────────────── -->
+<footer>
+  <div class="footer-left">
+    <span class="footer-version">v0.1.0</span>
+    <strong>ASUSTeK Computer TP Research SPA</strong><br>
+    <span class="footer-copy">
+      <span class="en">© 2025 All Rights Reserved. For academic use only.</span>
+      <span class="zh">© 2025 版權所有，僅供學術研究用途。</span>
+    </span>
+  </div>
+  <div class="footer-right">
+    <span class="footer-right-label">
+      <span class="en">Group Members</span><span class="zh">小組成員</span>
+    </span>
+    <div class="members-list">
+      <a onclick="openMember('May')"      class="member-chip">May</a>
+      <a onclick="openMember('Atherine')" class="member-chip">Atherine</a>
+      <a onclick="openMember('Fanny')"    class="member-chip">Fanny</a>
+      <a onclick="openMember('Allen')"    class="member-chip">Allen</a>
+      <a onclick="openMember('Wesley')"   class="member-chip">Wesley</a>
+      <a onclick="openMember('Datou')"    class="member-chip">Datou</a>
+    </div>
+  </div>
+</footer>
+
+<!-- ── MEMBER MODAL ──────────────────────────────────────────── -->
+<div id="memberModal" style="
+  display:none; position:fixed; inset:0;
+  background:rgba(0,0,0,.5); z-index:2000;
+  align-items:center; justify-content:center;
+">
+  <div style="
+    background:var(--surface); border-radius:14px;
+    padding:40px 36px 32px; max-width:380px; width:90%;
+    position:relative;
+    box-shadow:0 12px 48px rgba(0,0,0,.28);
+    border-top: 4px solid var(--asus-blue);
+  ">
+    <button onclick="closeMember()" style="
+      position:absolute; top:14px; right:16px;
+      background:none; border:none; font-size:20px;
+      cursor:pointer; color:var(--text-label);
+      line-height:1;
+    " aria-label="Close">✕</button>
+    <div id="modalContent"></div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
